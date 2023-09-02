@@ -2,12 +2,11 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 22
-    buildToolsVersion '25.0.0'
 
     defaultConfig {
         applicationId "net.waynepiekarski.wearsensors"
         minSdkVersion 10
-        targetSdkVersion 22
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
     }
@@ -27,5 +26,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    wearApp project(':wear')
+}
+repositories {
+    mavenCentral()
 }

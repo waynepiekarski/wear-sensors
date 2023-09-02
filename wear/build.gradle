@@ -3,12 +3,11 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion '25.0.0'
 
     defaultConfig {
         applicationId "net.waynepiekarski.wearsensors"
         minSdkVersion 22
-        targetSdkVersion 23
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
     }
@@ -27,7 +26,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.google.android.support:wearable:1.4.0'
-    provided 'com.google.android.wearable:wearable:1.0.0'
+    implementation 'com.google.android.support:wearable:2.1.0'
+    compileOnly 'com.google.android.wearable:wearable:2.1.0'
 }
